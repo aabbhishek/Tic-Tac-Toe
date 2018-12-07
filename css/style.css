@@ -50,7 +50,6 @@ html,body {
 
 .ad-con {
 	/*background-color: #000;*/
-
 	overflow: hidden;
 	position: relative;
 	background: linear-gradient(-45deg,#3c0f57,#030414,#250936,#030104);
@@ -62,4 +61,9 @@ html,body {
   font-family: Merkur;
   color: #fff;
   font-size: 70px;
+}.font-back-anim{
+	font-size: 80px;
+	color: #fff;
+	opacity: 0.3;
+
 }
