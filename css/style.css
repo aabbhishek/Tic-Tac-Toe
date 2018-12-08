@@ -5,6 +5,8 @@ html,body {
 	overflow-x: hidden;
 }
 
+/* background animaton */
+
 @-webkit-keyframes Gradient {
 	0% {
 		background-position: 0% 50%
@@ -63,6 +65,8 @@ html,body {
 	animation: Gradient 15s ease infinite;
 }
 
+/* neon glow effect  */
+
 @-webkit-keyframes on-off {
 	0% {
 		text-shadow: 0px 0px 15px #F50057;
@@ -111,8 +115,7 @@ html,body {
 	-webkit-animation: on-off 3s ease-out infinite;
 	-moz-animation: on-off 3s ease-out infinite;
 	animation: on-off 3s ease-out infinite;
-}
-.font-back-anim{
+}.font-back-anim{
 	font-size: 80px;
 	color: #fff;
 	opacity: 0.3;
@@ -128,7 +131,114 @@ html,body {
 	background-color: transparent;
 	border:2px solid #F50057;
 	font-size: 20px;
-	
 	cursor: pointer;
+	transition: 0.5s ;
+	font-family: Pdark;
+}.but-model-user:hover{
+	background-color: #F50057;
+}
 
+
+/*  text shadow animaton for win  */
+
+@keyframes win {
+	0% {
+		text-shadow: 0px 0px 15px #00C853;
+	}
+	50% {
+		text-shadow: 0px 0px 5px #00C853;
+	}
+	100% {
+		text-shadow: 0px 0px 15px #00C853;
+	}
+}
+
+@-webkit-keyframes win {
+	0% {
+		text-shadow: 0px 0px 15px #00C853;
+	}
+	50% {
+		text-shadow: 0px 0px 5px #00C853;
+	}
+	100% {
+		text-shadow: 0px 0px 15px #00C853;
+	}
+}
+
+@-moz-keyframes win {
+	0% {
+		text-shadow: 0px 0px 15px #00C853;
+	}
+	50% {
+		text-shadow: 0px 0px 5px #00C853;
+	}
+	100% {
+		text-shadow: 0px 0px 15px #00C853;
+	}
+}
+.win-anim{
+	-webkit-animation: win 3s ease-out infinite;
+	-moz-animation: win 3s ease-out infinite;
+	animation: win 3s ease-out infinite;
+
+}
+
+
+/* Visible hidden animaton  */
+
+@keyframes vh {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 0;
+	}
+	45% {
+		opacity: 1;
+	}
+	60% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@-webkit-keyframes vh {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 0;
+	}
+	45% {
+		opacity: 1;
+	}
+	60% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@-moz-keyframes vh {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 0;
+	}
+	45% {
+		opacity: 1;
+	}
+	60% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.flick{
+	-webkit-animation: vh 5s ease-out infinite;
+	-moz-animation: vh 5s ease-out infinite;
+	animation: vh 5s ease-out infinite;
 }
