@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="css/app.min.css">
+    <!-- <link rel="stylesheet" href="css/app.min.css"> -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/dropzone.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -35,8 +35,8 @@
             <br>
 
               <div class="row button-opptions">
-                <button name="button_1" class="but-model-user">LogIn</button>
-                <button name="button_2" class="but-model-user">Register</button>
+                <button name="button_1" class="but-model-user login-btn-model">LogIn</button>
+                <button name="button_2" class="but-model-user register-btn-model">Register</button>
               </div>
 
       </div>
@@ -45,25 +45,94 @@
 
     <!-- model Login part  -->
 
-    <div class="modal" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <div class="modal fade login bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content model-backgroud">
+          <div class="modal-header model-backgroud">
+            <h5 class="modal-title model-backgroud" style="font-size:30px;font-family:Pdark;">Login</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#fff;">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
+        <form>
           <div class="modal-body">
-            <p>Modal body text goes here.</p>
+              <div class="form-group">
+                <label for="player_id" style="font-size:20px;font-family:Pdark;">Email Id</label>
+                <input type="text" class="form-control" id="player_id" aria-describedby="emailHelp" placeholder="ex - jhon@show.com" style="color:#f50057">
+
+              </div>
+              <div class="form-group">
+                <label for="player_id_pass" style="font-size:20px;font-family:Pdark;">Password</label>
+                <input type="password" class="form-control" id="player_id_pass" placeholder="Password" style="color:#f50057">
+              </div>
           </div>
+
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn" style="background-color:#F50057!important;font-size:15px;font-family:Pdark;">LogIn</button>
           </div>
+
+        </form>
         </div>
       </div>
-   </div>
+    </div>
+
+    <!-- model Register part  -->
+
+    <div class="modal fade register bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content model-backgroud">
+          <div class="modal-header model-backgroud">
+            <h5 class="modal-title model-backgroud" style="font-size:30px;font-family:Pdark;">Register</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#fff;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        <form>
+          <div class="modal-body">
+              <div class="form-group">
+                <label for="name" style="font-size:20px;font-family:Pdark;">Name</label>
+                <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="ex - Jhon Snow" style="color:#f50057">
+
+              </div>
+
+              <div class="form-group">
+                <label for="email" style="font-size:20px;font-family:Pdark;">Email</label>
+                <input type="email" class="form-control" id="lname" aria-describedby="emailHelp" placeholder="ex - jhon@snow.com " style="color:#f50057">
+
+              </div>
+
+              <div class="form-group">
+                <label for="pass" style="font-size:20px;font-family:Pdark;">Password</label>
+                <input type="password" class="form-control" id="pass" placeholder="Password" style="color:#f50057">
+              </div>
+
+              <div class="form-group">
+                <label for="cpass" style="font-size:20px;font-family:Pdark;">Confirm password</label>
+                <input type="password" class="form-control" id="cpass" placeholder="Confirm Password" style="color:#f50057">
+              </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn " style="background-color:#F50057!important;font-size:15px;font-family:Pdark;">Register</button>
+          </div>
+
+        </form>
+        </div>
+      </div>
+    </div>
+
 
   </body>
+
+  <script src="js/jquery-1.12.0.min.js"></script>
+       <script src="js/popper.min.js"></script>
+       <script src="js/bootstrap.min.js"></script>
+      <!-- <script src="js/dropzone.min.js"></script> -->
+       <script src="js/sweetalert2.min.js"></script>
+       <!-- <script src="js/trumbowyg.min.js"></script> -->
+       <!-- <script type="text/javascript" src="js/app.min.js"></script>
+       <script type="text/javascript" src="js/app1.min.js"></script> -->
+       <script type="text/javascript" src="js/main.js"></script>
+
+
 </html>
