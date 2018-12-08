@@ -1,3 +1,7 @@
+<?php
+include 'includes/conn.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -8,6 +12,7 @@
     <!-- <link rel="stylesheet" href="css/app.min.css"> -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/dropzone.min.css">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title>TIC - TAC - TOE</title>
@@ -87,40 +92,61 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-        <form>
+        <form name="reg-form" action=""  method="post">
           <div class="modal-body">
               <div class="form-group">
                 <label for="name" style="font-size:20px;font-family:Pdark;">Name</label>
-                <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="ex - Jhon Snow" style="color:#f50057">
+                <input type="text" class="form-control" name="r_name" id="name" aria-describedby="emailHelp" placeholder="ex - Jhon Snow" style="color:#f50057">
 
               </div>
 
               <div class="form-group">
                 <label for="email" style="font-size:20px;font-family:Pdark;">Email</label>
-                <input type="email" class="form-control" id="lname" aria-describedby="emailHelp" placeholder="ex - jhon@snow.com " style="color:#f50057">
+                <input type="email" class="form-control" name="r_email" id="email" aria-describedby="emailHelp" placeholder="ex - jhon@snow.com " style="color:#f50057">
 
               </div>
 
               <div class="form-group">
                 <label for="pass" style="font-size:20px;font-family:Pdark;">Password</label>
-                <input type="password" class="form-control" id="pass" placeholder="Password" style="color:#f50057">
+                <input type="password" class="form-control" name="r_pass" id="pass" placeholder="Password" style="color:#f50057">
               </div>
 
               <div class="form-group">
                 <label for="cpass" style="font-size:20px;font-family:Pdark;">Confirm password</label>
-                <input type="password" class="form-control" id="cpass" placeholder="Confirm Password" style="color:#f50057">
+                <input type="password" class="form-control" name="r_cpass" id="cpass" placeholder="Confirm Password" style="color:#f50057">
               </div>
           </div>
 
           <div class="modal-footer">
-            <button type="button" class="btn " style="background-color:#F50057!important;font-size:15px;font-family:Pdark;">Register</button>
+            <button class="btn btn_reg" style="background-color:#F50057!important;font-size:15px;font-family:Pdark;cursor:pointer;">Register</button>
           </div>
 
         </form>
         </div>
       </div>
     </div>
+    <?php
+    if($_POST['r_name'] && $_POST['r_email'] && $_POST['r_pass']){
 
+      echo "<script>alert('asd');</script>";
+
+      $name=$_POST['r_name'];
+      $email=$_POST['r_email'];
+      $pass=$_POST['r_pass'];
+
+
+      $sql = "INSERT INTO used_info VALUES ($name, $email,$pass)";
+
+      if (mysqli_query($conn, $sql)) {
+        echo "<script> swal({type: 'success',title: 'Registed Successful',}) </script>";
+      } else {
+        echo "<script> swal({type: 'error',title: ".mysqli_error($conn).",}) </script>";
+
+        }
+
+    }
+
+    ?>
 
   </body>
 
