@@ -47,6 +47,10 @@ html,body {
     font-family: 'Merkur';
     src: url('../fonts/Merkur.ttf');
 }
+@font-face {
+    font-family: 'Pdark';
+    src: url('../fonts/GALS.ttf');
+}
 
 .ad-con {
 	/*background-color: #000;*/
@@ -57,13 +61,74 @@ html,body {
 	-webkit-animation: Gradient 15s ease infinite;
 	-moz-animation: Gradient 15s ease infinite;
 	animation: Gradient 15s ease infinite;
-}.h-name{
-  font-family: Merkur;
-  color: #fff;
+}
+
+@-webkit-keyframes on-off {
+	0% {
+		text-shadow: 0px 0px 15px #F50057;
+	}
+	50% {
+		text-shadow: 0px 0px 5px #F50057;
+	}
+	100% {
+		text-shadow: 0px 0px 15px #F50057;
+	}
+}
+
+@-moz-keyframes on-off {
+	0% {
+		text-shadow: 0px 0px 15px #F50057;
+	}
+	50% {
+		text-shadow: 0px 0px 5px #F50057;
+	}
+	100% {
+		text-shadow: 0px 0px 15px #F50057;
+	}
+}
+
+@keyframes on-off {
+	0% {
+		text-shadow: 0px 0px 15px #F50057;
+	}
+	50% {
+		text-shadow: 0px 0px 5px #F50057;
+	}
+	100% {
+		text-shadow: 0px 0px 15px #F50057;
+	}
+}
+
+
+
+.h-name{
+	position: relative;
+  font-family: Pdark;
+  color: #F50057;
   font-size: 70px;
-}.font-back-anim{
+	margin-top: 20%;
+	margin-left: -50px;
+	-webkit-animation: on-off 3s ease-out infinite;
+	-moz-animation: on-off 3s ease-out infinite;
+	animation: on-off 3s ease-out infinite;
+}
+.font-back-anim{
 	font-size: 80px;
 	color: #fff;
 	opacity: 0.3;
+}.button-opptions{
+	position: relative;
+	left: 32.5%;
+	top: 7px;
+}
+.but-model-user{
+	width: 220px;
+	height: 40px;
+	color: #ffbad3;
+	background-color: transparent;
+	border:2px solid #F50057;
+	font-size: 20px;
+	
+	cursor: pointer;
 
 }
