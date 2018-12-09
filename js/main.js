@@ -9,8 +9,9 @@ $('.register-btn-model').click(function(){
 });
 
 
-//validating inputs  and submiting form
+//validating inputs  and submiting ref form
 $('.btn_reg').click(function(){
+    event.preventDefault();
     name=$('#name').val();
     email=$('#email').val();
     pass=$('#pass').val();
@@ -26,13 +27,13 @@ $('.btn_reg').click(function(){
         // end if
       }
       else{
-        event.preventDefault();
+
         $.ajax( {
           data:"r_name="+name+"&r_email="+email+"&r_pass="+pass,
           type:"post",
           url:'includes/register.php',
           success:function(data){
-            alert(data);
+
             swal({
               type: 'success',
               title: 'Your all setup ',
@@ -56,11 +57,56 @@ $('.btn_reg').click(function(){
       //end else
     }
 
+//click of reg-form
+});
+
+//Login Form
+
+  $(".login_btn").click(function() {
+    player_id=$('#player_id').val();
+    player_pass=$('#player_pass').val();
+
+    if(notEmpty(player_id) && notEmpty(player_pass)){
+
+      $.ajax({
+
+        data:"player_id="+player_id+"&player_pass="+player_pass,
+        type:"post",
+        url:'includes/login.php',
+        success:function(data) {
+
+            if(data=="false"){
+              aMesssage('error','Register to login');
+            }
+            else {
+              $('.login').modal('hide');
+              $('.login-btn-model').fadeOut(0);
+              $('.register-btn-model').fadeOut(0);
+              $('.play').fadeIn(1500);
+              $('.scores').fadeIn(1500);
+              aMesssage('success','Welcome '+data);
+              $(".user-name").text(data);
+              $(".user-data-display").animate({
+                  right:'-15px'
+              });
+
+            }
+        }
+
+      });
+
+    }
+    else {
+      aMesssage('error','Enter Email-Id or Password to LogIn');
+    }
+
 
 });
 
+
 });
 
+//valid funtion-1
 function notEmpty(value){
   if(value!=""){
     return true;
@@ -70,6 +116,7 @@ function notEmpty(value){
   }
 }
 
+//valid funtion-2
 function samePassword(pass,cpass){
   if(pass!=cpass){
     return true;
@@ -79,8 +126,13 @@ function samePassword(pass,cpass){
   }
 }
 
+//valid alert-1
 function aMesssage(type,message) {
 
   swal({type: ''+type+'',title: ''+message+'',});
+
+}
+
+function computerMove() {
 
 }

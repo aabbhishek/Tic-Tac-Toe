@@ -19,29 +19,47 @@
   </head>
   <body class="ad-con">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <!-- small display board -->
+      <div style="position:absolute;" class="user-data-display">
+        <center>
+           <!-- user welcome bord -->
+            <span><i class="fas fa-shield-alt uwb" style="transform:skewX(0deg);"></i></span>
+            <span class="user-name uwb"></span>
+            <!-- game score bord -->
+            <span class="user-score-font gsb"><i class="fas fa-user" style="transform:skewX(0deg);"></i></span>
+            <span class="user-score gsb">0</span>
+            <span class="gsb">:</span>
+            <span class="cpu-score gsb">0</span>
+            <span class="cpu-score-font gsb"><i class="fas fa-robot" style="transform:skewX(0deg);"></i></span>
+        </center>
+      </div>
       <div class="backgroud-anim">
         <div class="row" style="width: 100%!important;opacity:0.3;">
             <!-- row 1  -->
-          <div class="col-md-4 font-back-anim" style="border-right:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="far fa-circle "></i></center></div>
-          <div class="col-md-4 font-back-anim" style="border-right:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="fas fa-times"></i></center></div>
-          <div class="col-md-4 font-back-anim" style="padding:50px 50px 50px 50px;"><center><i class="far fa-circle win-anim flick"></i></center></div>
+          <div class="col-md-4 font-back-anim" style="border-right:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="far fa-circle oxf oxf_1"></i></center></div>
+          <div class="col-md-4 font-back-anim" style="border-right:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="fas fa-times oxf oxf_2"></i></center></div>
+          <div class="col-md-4 font-back-anim" style="padding:50px 50px 50px 50px;"><center><i class="far fa-circle win-anim flick oxf oxf_3"></i></center></div>
           <!-- row 2  -->
-          <div class="col-md-4 font-back-anim" style="border-right:1px solid #fff;border-top:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="fas fa-times"></i></center></div>
-          <div class="col-md-4 font-back-anim" style="border-right:1px solid #fff;border-top:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="far fa-circle "></i></center></div>
-          <div class="col-md-4 font-back-anim" style="border-top:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="far fa-circle win-anim flick"></i></center></div>
+          <div class="col-md-4 font-back-anim" style="border-right:1px solid #fff;border-top:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="fas fa-times oxf oxf_4"></i></center></div>
+          <div class="col-md-4 font-back-anim" style="border-right:1px solid #fff;border-top:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="far fa-circle oxf oxf_5"></i></center></div>
+          <div class="col-md-4 font-back-anim" style="border-top:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="far fa-circle win-anim flick oxf oxf_6"></i></center></div>
           <!-- row 3  -->
-          <div class="col-md-4 font-back-anim " style="border-right:1px solid #fff;border-top:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="far fa-circle"></i></center></div>
-          <div class="col-md-4 font-back-anim" style="border-right:1px solid #fff;border-top:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="fas fa-times"></i></center></div>
-          <div class="col-md-4 font-back-anim" style="border-top:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="far fa-circle win-anim flick"></i></center></div>
+          <div class="col-md-4 font-back-anim " style="border-right:1px solid #fff;border-top:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="far fa-circle oxf oxf_7"></i></center></div>
+          <div class="col-md-4 font-back-anim" style="border-right:1px solid #fff;border-top:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="fas fa-times oxf oxf_8"></i></center></div>
+          <div class="col-md-4 font-back-anim" style="border-top:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="far fa-circle win-anim flick oxf oxf_9"></i></center></div>
         </div>
       </div>
-      <div class="main-intraction cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" style="position: absolute;">
+      <div class="main-intraction cover-container w-100 h-100 p-3 mx-auto flex-column" style="position: absolute;">
+
+
             <center><h1 class="h-name">Tic Tac Toe</h1></center>
             <br>
 
               <div class="row button-opptions">
                 <button name="button_1" class="but-model-user login-btn-model">LogIn</button>
                 <button name="button_2" class="but-model-user register-btn-model">Register</button>
+                <button name="button_3" class="but-model-user play" style="display:none">PLAY</button>
+                <button name="button_3" class="but-model-user scores" style="display:none">Scores </button>
               </div>
 
       </div>
@@ -63,17 +81,17 @@
           <div class="modal-body">
               <div class="form-group">
                 <label for="player_id" style="font-size:20px;font-family:Pdark;">Email Id</label>
-                <input type="text" class="form-control" id="player_id" aria-describedby="emailHelp" placeholder="ex - jhon@show.com" style="color:#f50057">
+                <input type="text" class="form-control" name="player_id" id="player_id" aria-describedby="emailHelp" placeholder="ex - jhon@show.com" style="color:#f50057">
 
               </div>
               <div class="form-group">
                 <label for="player_id_pass" style="font-size:20px;font-family:Pdark;">Password</label>
-                <input type="password" class="form-control" id="player_id_pass" placeholder="Password" style="color:#f50057">
+                <input type="password" class="form-control" name="player_pass" id="player_pass" placeholder="Password" style="color:#f50057">
               </div>
           </div>
 
           <div class="modal-footer">
-            <button type="button" class="btn" style="background-color:#F50057!important;font-size:15px;font-family:Pdark;">LogIn</button>
+            <button type="button" class="btn login_btn" style="background-color:#F50057!important;font-size:15px;font-family:Pdark;">LogIn</button>
           </div>
 
         </form>
@@ -126,6 +144,16 @@
       </div>
     </div>
 
+
+    <!-- game level opptions  -->
+    <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          ...
+        </div>
+      </div>
+    </div>
+
   </body>
 
 
@@ -140,6 +168,7 @@
        <!-- <script type="text/javascript" src="js/app.min.js"></script>
        <script type="text/javascript" src="js/app1.min.js"></script> -->
        <script type="text/javascript" src="js/main.js"></script>
+       <script type="text/javascript" src="js/game.js"></script>
 
 
 </html>

@@ -16,10 +16,9 @@ if($_POST['r_name'] && $_POST['r_email'] && $_POST['r_pass']){
   $sql = "INSERT INTO `used_info`(name,email,password) VALUES('".$name."','".$email."','".$pass."')" ;
 
   if ($conn->query($sql) === true) {
-    echo "DONE";
+    // echo "DONE";
   } else {
     $conn->error;
-
     }
-
+//if end ..
 }
