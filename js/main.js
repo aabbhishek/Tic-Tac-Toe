@@ -104,6 +104,24 @@ $('.btn_reg').click(function(){
 });
 
 
+$(".play").click(function() {
+    $('.gsb').fadeIn();
+    $('.uwb').fadeOut(0);
+    $('.main-intraction').fadeOut();
+    $('.play').fadeOut();
+    $('.scores').fadeOut();
+    $('.h-name').fadeOut();
+    $('.oxf').addClass("game-reset");
+    $('.flick').removeClass("flick");
+    $('.oxf').addClass('far');
+    $('.oxf').addClass('fa-circle');
+    $('.oxf').removeClass('fas');
+    $('.oxf').removeClass('fa-times');
+    gameStarts();
+
+});
+
+
 });
 
 //valid funtion-1

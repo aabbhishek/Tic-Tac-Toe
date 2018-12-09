@@ -36,17 +36,17 @@
       <div class="backgroud-anim">
         <div class="row" style="width: 100%!important;opacity:0.3;">
             <!-- row 1  -->
-          <div class="col-md-4 font-back-anim" style="border-right:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="far fa-circle oxf oxf_1"></i></center></div>
-          <div class="col-md-4 font-back-anim" style="border-right:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="fas fa-times oxf oxf_2"></i></center></div>
-          <div class="col-md-4 font-back-anim" style="padding:50px 50px 50px 50px;"><center><i class="far fa-circle win-anim flick oxf oxf_3"></i></center></div>
+          <div class="col-md-4 font-back-anim" style="border-right:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="far fa-circle oxf oxf_0" key='0'></i></center></div>
+          <div class="col-md-4 font-back-anim" style="border-right:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="fas fa-times oxf oxf_1" key='1'></i></center></div>
+          <div class="col-md-4 font-back-anim" style="padding:50px 50px 50px 50px;"><center><i class="far fa-circle win-anim flick oxf oxf_2" key='2'></i></center></div>
           <!-- row 2  -->
-          <div class="col-md-4 font-back-anim" style="border-right:1px solid #fff;border-top:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="fas fa-times oxf oxf_4"></i></center></div>
-          <div class="col-md-4 font-back-anim" style="border-right:1px solid #fff;border-top:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="far fa-circle oxf oxf_5"></i></center></div>
-          <div class="col-md-4 font-back-anim" style="border-top:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="far fa-circle win-anim flick oxf oxf_6"></i></center></div>
+          <div class="col-md-4 font-back-anim" style="border-right:1px solid #fff;border-top:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="fas fa-times oxf oxf_3" key='3'></i></center></div>
+          <div class="col-md-4 font-back-anim" style="border-right:1px solid #fff;border-top:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="far fa-circle oxf oxf_4" key='4'></i></center></div>
+          <div class="col-md-4 font-back-anim" style="border-top:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="far fa-circle win-anim flick oxf oxf_5" key='5'></i></center></div>
           <!-- row 3  -->
-          <div class="col-md-4 font-back-anim " style="border-right:1px solid #fff;border-top:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="far fa-circle oxf oxf_7"></i></center></div>
-          <div class="col-md-4 font-back-anim" style="border-right:1px solid #fff;border-top:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="fas fa-times oxf oxf_8"></i></center></div>
-          <div class="col-md-4 font-back-anim" style="border-top:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="far fa-circle win-anim flick oxf oxf_9"></i></center></div>
+          <div class="col-md-4 font-back-anim " style="border-right:1px solid #fff;border-top:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="far fa-circle oxf oxf_6" key='6'></i></center></div>
+          <div class="col-md-4 font-back-anim" style="border-right:1px solid #fff;border-top:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="fas fa-times oxf oxf_7" key='7'></i></center></div>
+          <div class="col-md-4 font-back-anim" style="border-top:1px solid #fff;padding:50px 50px 50px 50px;"><center><i class="far fa-circle win-anim flick oxf oxf_8" key='8'></i></center></div>
         </div>
       </div>
       <div class="main-intraction cover-container w-100 h-100 p-3 mx-auto flex-column" style="position: absolute;">
@@ -145,11 +145,21 @@
     </div>
 
 
-    <!-- game level opptions  -->
-    <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-          ...
+    <!-- complete opptions  -->
+    <div class="modal win-show fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm model-backgroud">
+        <div class="modal-content model-backgroud">
+          <div class="modal-body">
+            <center>
+            <span><i style="color:#fff;font-size:30px;" class="score-final-icon"></i></span> <br>
+            <span  style="color:#fff;font-family:Pdark;font-size:30px;"class="score-final-text"></span>
+          </center>
+          </div>
+          <div class="modal-footer">
+            <button class="btn reset" style="background-color:#F50057!important;font-size:15px;font-family:Pdark;cursor:pointer;">Go for Next Round </button>
+          </div>
+
+
         </div>
       </div>
     </div>
