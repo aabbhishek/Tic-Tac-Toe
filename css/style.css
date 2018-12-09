@@ -121,8 +121,8 @@ html,body {
 	opacity: 0.3;
 }.button-opptions{
 	position: relative;
-	left: 32.5%;
-	top: 7px;
+	left: 32.3%;
+	top: 3px;
 }
 .but-model-user{
 	width: 220px;
@@ -132,7 +132,7 @@ html,body {
 	border:2px solid #F50057;
 	font-size: 20px;
 	cursor: pointer;
-	transition: 0.5s ;
+	transition: 0.5s;
 	font-family: Pdark;
 }.but-model-user:hover{
 	background-color: #F50057;

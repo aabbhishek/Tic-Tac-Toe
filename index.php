@@ -1,5 +1,5 @@
 <?php
-include 'includes/conn.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -125,30 +125,11 @@ include 'includes/conn.php';
         </div>
       </div>
     </div>
-    <?php
-    if($_POST['r_name'] && $_POST['r_email'] && $_POST['r_pass']){
-
-      echo "<script>alert('asd');</script>";
-
-      $name=$_POST['r_name'];
-      $email=$_POST['r_email'];
-      $pass=$_POST['r_pass'];
-
-
-      $sql = "INSERT INTO used_info VALUES ($name, $email,$pass)";
-
-      if (mysqli_query($conn, $sql)) {
-        echo "<script> swal({type: 'success',title: 'Registed Successful',}) </script>";
-      } else {
-        echo "<script> swal({type: 'error',title: ".mysqli_error($conn).",}) </script>";
-
-        }
-
-    }
-
-    ?>
 
   </body>
+
+
+
 
   <script src="js/jquery-1.12.0.min.js"></script>
        <script src="js/popper.min.js"></script>

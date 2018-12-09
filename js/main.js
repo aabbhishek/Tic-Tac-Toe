@@ -22,20 +22,38 @@ $('.btn_reg').click(function(){
         swal({
           type: 'error',
           title: 'Password Does not match',
-        })
+        });
+        // end if
       }
       else{
-        $('.btn_reg').submit();
+        event.preventDefault();
+        $.ajax( {
+          data:"r_name="+name+"&r_email="+email+"&r_pass="+pass,
+          type:"post",
+          url:'includes/register.php',
+          success:function(data){
+            alert(data);
+            swal({
+              type: 'success',
+              title: 'Your all setup ',
+              text: 'Login to Start playing',
+            });
+          }
+
+        });
+        // end else
       }
 
-
+      //end if
     }
     else {
       swal({
         type: 'error',
         title: 'Oops...',
         text: 'All details are compulsory',
-      })
+      });
+
+      //end else
     }
 
 
@@ -59,4 +77,10 @@ function samePassword(pass,cpass){
   else {
     return false;
   }
+}
+
+function aMesssage(type,message) {
+
+  swal({type: ''+type+'',title: ''+message+'',});
+
 }
