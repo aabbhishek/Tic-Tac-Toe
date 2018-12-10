@@ -156,7 +156,7 @@
           </center>
           </div>
           <div class="modal-footer">
-            <button class="btn reset" style="background-color:#F50057!important;font-size:15px;font-family:Pdark;cursor:pointer;">Go for Next Round </button>
+            <button class="btn reset-after" style="background-color:#F50057!important;font-size:15px;font-family:Pdark;cursor:pointer;">Go for Next Round </button>
           </div>
 
 
