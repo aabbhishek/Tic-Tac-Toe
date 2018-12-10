@@ -33,6 +33,7 @@ $('.btn_reg').click(function(){
           type:"post",
           url:'includes/register.php',
           success:function(data){
+            $('.register').modal('hide');
 
             swal({
               type: 'success',
@@ -83,7 +84,6 @@ $('.btn_reg').click(function(){
               $('.login-btn-model').fadeOut(0);
               $('.register-btn-model').fadeOut(0);
               $('.play').fadeIn(1500);
-              $('.scores').fadeIn(1500);
               aMesssage('success','Welcome '+data);
               $(".user-name").text(data);
               $(".user-data-display").animate({

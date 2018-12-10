@@ -58,8 +58,9 @@
               <div class="row button-opptions">
                 <button name="button_1" class="but-model-user login-btn-model">LogIn</button>
                 <button name="button_2" class="but-model-user register-btn-model">Register</button>
-                <button name="button_3" class="but-model-user play" style="display:none">PLAY</button>
-                <button name="button_3" class="but-model-user scores" style="display:none">Scores </button>
+
+                <button name="button_3" class="but-model-user play" style="display:none;width:440px!important;">PLAY</button>
+
               </div>
 
       </div>
